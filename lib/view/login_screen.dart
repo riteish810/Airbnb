@@ -1,4 +1,6 @@
+import 'package:airbnb/view/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -104,11 +106,13 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(SignupScreen());
+              },
               child: Text(
                 "Don't have account? Create here",
                 style: TextStyle(
-                  color: Colors.amber,
+                  color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
