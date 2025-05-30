@@ -91,8 +91,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.pink,
                           padding: EdgeInsets.symmetric(
-                            horizontal: 60,
-                            vertical: 40,
+                            horizontal: 30,
+                            vertical: 10,
                           ),
                         ),
                         child: Text(
@@ -105,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 15),
             TextButton(
               onPressed: () {
                 Get.to(SignupScreen());

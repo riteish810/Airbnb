@@ -68,7 +68,11 @@ class _SignupScreenState extends State<SignupScreen> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _emailEditingcontroller,
                       decoration: InputDecoration(
@@ -85,7 +89,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _passwordEditingcontroller,
                       decoration: InputDecoration(
@@ -102,7 +110,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _firstnameEditingcontroler,
                       decoration: InputDecoration(
@@ -119,7 +131,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _lastnameEditingcontroller,
                       decoration: InputDecoration(
@@ -136,7 +152,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _citynameEditingcontroller,
                       decoration: InputDecoration(
@@ -153,7 +173,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _countrytextEditingcontroller,
                       decoration: InputDecoration(
@@ -170,7 +194,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(
+                      top: 20.0,
+                      left: 20,
+                      right: 20,
+                    ),
                     child: TextFormField(
                       controller: _biotexEditngcontroller,
                       decoration: InputDecoration(
@@ -186,15 +214,39 @@ class _SignupScreenState extends State<SignupScreen> {
                       },
                     ),
                   ),
-                  MaterialButton(
-                    onPressed: () {},
-                    child:
-                        imageFileofuser == null
-                            ? const Icon(Icons.add_a_photo)
-                            : CircleAvatar(
-                              radius: MediaQuery.of(context).size.width / 5.0,
-                              child: CircleAvatar(),
-                            ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25.0),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      child:
+                          imageFileofuser == null
+                              ? const Icon(Icons.add_a_photo)
+                              : CircleAvatar(
+                                radius: MediaQuery.of(context).size.width / 5.0,
+                                child: CircleAvatar(
+                                  backgroundImage: FileImage(imageFileofuser!),
+                                  radius:
+                                      MediaQuery.of(context).size.width / 5.2,
+                                ),
+                              ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 26.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.pink,
+                      ),
+                      child: Text(
+                        'Create Account',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
